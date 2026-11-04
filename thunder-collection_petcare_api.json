@@ -1,0 +1,109 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "PetCare API",
+  "dateExported": "2026-11-04T20:18:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "name": "Criar Tutor",
+      "method": "POST",
+      "url": "http://localhost:8080/api/tutores",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"nome\": \"Maria Silva\",\n  \"cpf\": \"12345678901\",\n  \"telefone\": \"47999990000\",\n  \"endereco\": \"Rua das Flores, 123\"\n}"
+      }
+    },
+    {
+      "name": "Listar Tutores",
+      "method": "GET",
+      "url": "http://localhost:8080/api/tutores"
+    },
+    {
+      "name": "Criar Animal",
+      "method": "POST",
+      "url": "http://localhost:8080/api/animais",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"nome\": \"Thor\",\n  \"especie\": \"Cachorro\",\n  \"raca\": \"Labrador\",\n  \"dataNascimento\": \"2021-05-10\",\n  \"tutor\": {\n    \"id\": 1\n  }\n}"
+      }
+    },
+    {
+      "name": "Criar Veterinario",
+      "method": "POST",
+      "url": "http://localhost:8080/api/veterinarios",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"nome\": \"Dr. Carlos\",\n  \"crmv\": \"SP12345\",\n  \"especiesAtendidas\": [\"Cachorro\", \"Gato\"]\n}"
+      }
+    },
+    {
+      "name": "Agendar Consulta",
+      "method": "POST",
+      "url": "http://localhost:8080/api/consultas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"animal\": {\"id\": 1},\n  \"veterinario\": {\"id\": 1},\n  \"local\": \"Clínica PetCare\",\n  \"data\": \"2026-11-10\",\n  \"horario\": \"14:30:00\"\n}"
+      }
+    },
+    {
+      "name": "Cancelar Consulta",
+      "method": "PATCH",
+      "url": "http://localhost:8080/api/consultas/1/cancelar"
+    },
+    {
+      "name": "Registrar Atendimento",
+      "method": "POST",
+      "url": "http://localhost:8080/api/atendimentos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"animal\": {\"id\": 1},\n  \"diagnostico\": \"Virose\",\n  \"observacoes\": \"Animal com febre e apatia.\",\n  \"orientacoes\": \"Hidratação e repouso.\",\n  \"dataAtendimento\": \"2026-11-04\"\n}"
+      }
+    },
+    {
+      "name": "Registrar Vacina",
+      "method": "POST",
+      "url": "http://localhost:8080/api/vacinas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"animal\": {\"id\": 1},\n  \"nome\": \"V10\",\n  \"dataAplicacao\": \"2026-11-04\",\n  \"lote\": \"L-2048\"\n}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+@startuml
+class Tutor {
+  - Long id
+  - String nome
+  - String cpf
+  - String telefone
+  - String endereco
+  + List<Animal> animais
+}
+
+class Animal {
+  - Long id
+  - String nome
+  - String especie
+  - String raca
+  - LocalDate dataNascimento
+  + Tutor tutor
+}
+
+class Veterinario {
+  - Long id
+  - String nome
+  - String crmv
+  + List<String> especiesAtendidas
+}
+
+class Consulta {
+  - Long id
+  - String local
+  - LocalDate data
+  - LocalTime horario
+  - boolean cancelada
+  + Animal animal
+  + Veterinario veterinario
+}
+
+class Atendimento {
+  - Long id
+  - String diagnostico
+  - String observacoes
+  - String orientacoes
+  - LocalDate dataAtendimento
+  + Animal animal
+}
+
+class Vacina {
+  - Long id
+  - String nome
+  - LocalDate dataAplicacao
+  - String lote
+  + Animal animal
+}
+
+Tutor "1" --> "0..*" Animal
+Animal "1" --> "0..*" Consulta
+Veterinario "1" --> "0..*" Consulta
+Animal "1" --> "0..*" Atendimento
+Animal "1" --> "0..*" Vacina
+@enduml
