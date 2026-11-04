@@ -3,8 +3,8 @@
 API REST para gerenciamento de clínicas veterinárias, desenvolvida em Java com Spring Boot, Spring Data JPA e banco de dados relacional em memória (H2).
 
 ## Informações do aluno
-- Nome: [Seu Nome Completo]
-- RA: [Seu RA]
+- Nome: Guilherme Ferreira Freitas
+- RA: 20253331
 
 ## Objetivo
 A API permite:
@@ -97,8 +97,9 @@ Dados de acesso ao H2:
 - `DELETE /api/vacinas/{id}`
 
 ## Diagrama UML
-O diagrama de classes está disponível em:
-- `PetCareUML.puml`
+O diagrama de classes está disponível no arquivo `PetCareUML.puml` e também em imagem exportada:
+
+![Diagrama UML PetCare](./PetCareUML.png)
 
 ## Observações finais
 - As regras de negócio foram implementadas na camada de serviços.
