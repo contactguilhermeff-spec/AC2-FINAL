@@ -101,6 +101,9 @@ O diagrama de classes está disponível no arquivo `PetCareUML.puml` e também e
 
 ![Diagrama UML PetCare](./PetCareUML.png)
 
+<img width="710" height="595" alt="image" src="https://github.com/user-attachments/assets/c5940fbe-7559-4329-a788-9502b15d859c" />
+
+
 ## Observações finais
 - As regras de negócio foram implementadas na camada de serviços.
 - Os dados são persistidos em banco de dados relacional via JPA.
