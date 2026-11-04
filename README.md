@@ -3,8 +3,8 @@
 API REST para gerenciamento de clínicas veterinárias, desenvolvida em Java com Spring Boot, Spring Data JPA e banco de dados relacional em memória (H2).
 
 ## Informações do aluno
-- Nome: Guilherme Ferreira Freitas
-- RA: 20253331
+- Nome: Guilherme Fabricio Ferreira
+- RA: 234843
 
 ## Objetivo
 A API permite:
