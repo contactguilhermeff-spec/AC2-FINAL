@@ -48,6 +48,7 @@ Dados de acesso ao H2:
 - Senha: vazia
 
 ## Endpoints principais
+<img width="956" height="447" alt="image" src="https://github.com/user-attachments/assets/8e20084f-6e29-4d87-973b-47a882a3226c" />
 
 ### Tutores
 - `POST /api/tutores`
