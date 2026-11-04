@@ -1,44 +1,51 @@
 # PetCare API
 
-API REST para gerenciamento de clínica veterinária.
+API REST para gerenciamento de clínicas veterinárias, desenvolvida em Java com Spring Boot, Spring Data JPA e banco de dados relacional em memória (H2).
 
-## Tecnologias
+## Informações do aluno
+- Nome: [Seu Nome Completo]
+- RA: [Seu RA]
+
+## Objetivo
+A API permite:
+- cadastro de tutores e animais;
+- cadastro de veterinários e espécies atendidas;
+- agendamento de consultas com validação de habilitação e conflito de horários;
+- cancelamento de consultas;
+- registro de atendimentos e vacinas;
+- consulta ao histórico de atendimento e vacinação por animal.
+
+## Tecnologias utilizadas
 - Java 17
 - Spring Boot 3.3.5
+- Spring Web
 - Spring Data JPA
+- Spring Validation
 - H2 Database
 - Maven
 
-## Funcionalidades
-- Cadastro de tutores e animais
-- Cadastro de veterinários e espécies atendidas
-- Agendamento de consultas com validação de horário e habilitação
-- Cancelamento de consultas
-- Registro de atendimentos e vacinas
-- Histórico de atendimentos e vacinação por animal
+## Estrutura do projeto
+- `src/main/java/com/petcare/api/model` — entidades JPA
+- `src/main/java/com/petcare/api/repository` — repositórios com JpaRepository e consultas personalizadas
+- `src/main/java/com/petcare/api/service` — interfaces e implementações da camada de serviço
+- `src/main/java/com/petcare/api/controller` — controllers REST
+- `src/main/java/com/petcare/api/exception` — tratamento de exceções
+- `src/main/resources/application.properties` — configuração da aplicação e H2
 
 ## Como executar
-1. Abra o terminal na pasta do projeto.
+1. Acesse a pasta do projeto:
+   `cd petcare-api`
 2. Execute:
+   `mvn spring-boot:run`
+3. A aplicação ficará disponível em:
+   `http://localhost:8080`
+4. Console do banco H2:
+   `http://localhost:8080/h2-console`
 
-```bash
-mvn spring-boot:run
-```
-
-3. A API ficará disponível em:
-
-```text
-http://localhost:8080
-```
-
-4. Para acessar o banco H2:
-
-```text
-http://localhost:8080/h2-console
-```
-
-Usuário: `sa`
-Senha: vazia
+Dados de acesso ao H2:
+- URL: `jdbc:h2:mem:petcaredb`
+- Usuário: `sa`
+- Senha: vazia
 
 ## Endpoints principais
 
@@ -88,3 +95,24 @@ Senha: vazia
 - `GET /api/vacinas/animal/{animalId}`
 - `PUT /api/vacinas/{id}`
 - `DELETE /api/vacinas/{id}`
+
+## Diagrama UML
+O diagrama de classes está disponível em:
+- `PetCareUML.puml`
+
+## Observações finais
+- As regras de negócio foram implementadas na camada de serviços.
+- Os dados são persistidos em banco de dados relacional via JPA.
+- A API fornece endpoints de criação, leitura, atualização e exclusão, além de validações de regra de negócio.
+
+## .gitignore
+```
+target/
+*.log
+*.h2.db
+*.mv.db
+*.lock
+.idea/
+*.iml
+.DS_Store
+```
